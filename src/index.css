@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #fffdf7;
+  --color-paper: #f7f1e4;
+  --color-beige: #e8d8b7;
+  --color-beige-deep: #c9b893;
+  --color-forest: #243b2b;
+  --color-forest-deep: #16241b;
+  --color-forest-mid: #3a5541;
+  --color-sage: #6e8571;
+  --color-taupe: #665c4e;
+  --color-amber: #96592a;
+  --color-amber-light: #b4763a;
+
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-forest);
+    font-family: var(--font-sans);
+    font-feature-settings: "tnum" 1;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--color-forest);
+    color: var(--color-cream);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-amber);
+    outline-offset: 3px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-variation-settings: "SOFT" 0, "WONK" 0;
+  }
+}
+
+/* ---- paper grain: the page is printed on uncoated stock ---- */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.055;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---- letterpress label typography ---- */
+.u-label {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.6875rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.u-label-sm {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.625rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+/* ---- mounted specimen plate: hairline rule + offset frame ---- */
+.plate {
+  border: 1px solid color-mix(in srgb, var(--color-forest) 30%, transparent);
+  position: relative;
+}
+
+.plate::after {
+  content: "";
+  position: absolute;
+  inset: -7px;
+  border: 1px solid color-mix(in srgb, var(--color-forest) 16%, transparent);
+  pointer-events: none;
+}
+
+.plate-light {
+  border-color: color-mix(in srgb, var(--color-cream) 34%, transparent);
+}
+
+.plate-light::after {
+  border-color: color-mix(in srgb, var(--color-cream) 16%, transparent);
+}
+
+/* ---- images sit in the same warm grade across the whole catalogue ---- */
+.plate-img {
+  filter: saturate(0.92) contrast(1.02);
+}
+
+.vertical-rl {
+  writing-mode: vertical-rl;
+}
+
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.link-underline:hover,
+.link-underline:focus-visible {
+  background-size: 100% 1px;
+}
+
+input,
+textarea,
+select {
+  font-family: var(--font-sans);
+}
