@@ -1,10 +1,14 @@
 import { useMemo, useState, type ChangeEvent } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
+  ADDRESS,
   BRAND,
   CREDIT,
   FOUNDER,
   IMAGES,
+  MAPS_EMBED_URL,
+  MAPS_LINK,
+  MAP_COORDS,
   NAV,
   PHONE_DISPLAY,
   PHONE_TEL,
@@ -233,11 +237,11 @@ export function Contact() {
         <Reveal className="lg:col-span-5">
           <div className="plate bg-paper p-6 sm:p-8">
             <Photo
-              src={IMAGES.bottles}
-              alt="Rows of glass bottles holding herbs and oils, ready for labelling"
+              src={IMAGES.oilNature}
+              alt="Bassi Organics workshop bottle study in natural light"
               className="mb-6 aspect-[16/9]"
               spec="Plate H"
-              caption="Bassi Organics — direct lines"
+              caption="Bassi Organics — Workshop & Direct Lines"
             />
             <span className="u-label-sm text-amber">Direct lines</span>
 
@@ -259,24 +263,20 @@ export function Contact() {
                 ["Brand", BRAND],
                 ["Founder", FOUNDER],
                 ["Phone / WhatsApp", PHONE_DISPLAY],
-                ["Response hours", "[Timings to be confirmed]"],
-                ["Address", "[Full postal address to be confirmed]"],
-                ["Serving", "Orders confirmed directly over WhatsApp"],
+                ["Response hours", "Mon – Sat: 9:00 AM – 8:00 PM IST"],
+                ["Address", ADDRESS],
+                ["Coordinates", `${MAP_COORDS.lat}, ${MAP_COORDS.lng}`],
+                ["Serving", "All-India dispatch via direct WhatsApp orders"],
               ].map(([k, v]) => (
                 <div
                   key={k}
                   className="flex flex-wrap items-baseline justify-between gap-3 border-b border-forest/15 py-3.5"
                 >
                   <dt className="u-label-sm text-taupe">{k}</dt>
-                  <dd className="text-right text-[0.95rem] text-forest">{v}</dd>
+                  <dd className="max-w-[32ch] text-right text-[0.93rem] text-forest">{v}</dd>
                 </div>
               ))}
             </dl>
-
-            <p className="mt-6 text-[0.85rem] leading-relaxed text-taupe">
-              Fields marked “to be confirmed” are placeholders — send us the real address and
-              timings and they will be published here the same day.
-            </p>
           </div>
         </Reveal>
 
@@ -413,6 +413,56 @@ export function Contact() {
           </form>
         </Reveal>
       </div>
+
+      {/* Workshop Location & Google Map */}
+      <div className="mt-12 sm:mt-16">
+        <Reveal delay={0.12}>
+          <div className="plate bg-paper p-5 sm:p-8">
+            <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+              <div>
+                <div className="flex items-center gap-3">
+                  <span className="u-label-sm text-amber">Plate M — Workshop Location</span>
+                  <span className="h-px w-8 bg-forest/25" />
+                  <span className="u-label-sm text-taupe">Parbatsar, Rajasthan</span>
+                </div>
+                <h3 className="mt-2 font-display text-2xl font-semibold text-forest sm:text-3xl">
+                  Bassi Organics Workshop & Dispatch
+                </h3>
+                <p className="mt-1.5 text-[0.98rem] leading-relaxed text-taupe">
+                  📍 {ADDRESS}
+                </p>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="inline-flex items-center gap-1.5 border border-forest/20 bg-cream px-3 py-1.5 u-label-sm text-forest">
+                  Coordinates: {MAP_COORDS.lat}, {MAP_COORDS.lng}
+                </span>
+                <Btn
+                  href={MAPS_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="solid"
+                  className="px-4! py-2! text-xs!"
+                >
+                  Open in Google Maps ↗
+                </Btn>
+              </div>
+            </div>
+
+            {/* Interactive Map Iframe */}
+            <div className="relative aspect-[16/9] w-full overflow-hidden border border-forest/20 bg-cream shadow-inner sm:aspect-[21/9]">
+              <iframe
+                title="Bassi Organics Google Maps Location"
+                src={MAPS_EMBED_URL}
+                className="h-full w-full border-0"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </div>
+        </Reveal>
+      </div>
     </Section>
   );
 }
@@ -438,6 +488,17 @@ export function Footer() {
                 Coconut-oil-based herbal hair oil and a herbal shampoo. Short ingredient lists,
                 small batches, and a WhatsApp line that a human answers.
               </p>
+              <div className="mt-4 flex items-start gap-2.5 text-[0.88rem] leading-relaxed text-cream/80">
+                <span className="text-amber">📍</span>
+                <a
+                  href={MAPS_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-beige hover:underline"
+                >
+                  {ADDRESS}
+                </a>
+              </div>
               <div className="mt-6 flex flex-wrap gap-3">
                 <Btn href={`tel:${PHONE_TEL}`} variant="light" className="px-5! py-3!">
                   <PhoneIcon /> {PHONE_DISPLAY}

@@ -1,5 +1,6 @@
 import { Header, Hero, SideRail } from "./components/Header";
 import { About, HowTo, Ingredients, Products, WhyUs } from "./components/Sections1";
+import { Videos } from "./components/Videos";
 import { Faq, Founder, Gallery, Reviews } from "./components/Sections2";
 import { Contact, Footer, Order } from "./components/Sections3";
 
@@ -23,6 +24,7 @@ export default function App() {
           <Products />
           <Ingredients />
           <WhyUs />
+          <Videos />
           <HowTo />
           <Founder />
           <Gallery />

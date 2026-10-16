@@ -4,6 +4,11 @@ import productShampooImg from "../assets/product-shampoo.jpg";
 import founderImg from "../assets/founder.jpg";
 import coconutImg from "../assets/coconut.jpg";
 import logoImg from "../assets/logo.png";
+import oilNatureImg from "../assets/coconut-oil-nature.jpeg";
+import oilSpaImg from "../assets/coconut-oil-spa.jpeg";
+import shampooLabelsImg from "../assets/shampoo-details-labels.jpeg";
+import shampooSteamImg from "../assets/shampoo-trio-steam.jpeg";
+import shampooWaterfallImg from "../assets/shampoo-waterfall.jpg";
 
 /* ------------------------------------------------------------------ *
  *  Brand constants
@@ -14,6 +19,12 @@ export const PHONE_DISPLAY = "+91 90247 75584";
 export const PHONE_TEL = "+919024775584";
 export const WA_BASE = "https://wa.me/919024775584";
 export const CREDIT = "Marwar Infotech";
+export const ADDRESS = "Shri Yade Mata Colony, Parbatsar, Rajasthan, India - 341512";
+export const MAP_COORDS = { lat: 26.878538827927546, lng: 74.7543112620447 };
+export const MAPS_EMBED_URL =
+  "https://maps.google.com/maps?q=26.878538827927546,74.7543112620447&t=&z=16&ie=UTF8&iwloc=&output=embed";
+export const MAPS_LINK =
+  "https://www.google.com/maps?q=26.878538827927546,74.7543112620447";
 
 export const waLink = (message: string) =>
   `${WA_BASE}?text=${encodeURIComponent(message)}`;
@@ -34,7 +45,12 @@ export const IMAGES = {
   productShampoo: productShampooImg,
   founder: founderImg,
   coconut: coconutImg,
-  about: px(11159174),
+  oilNature: oilNatureImg,
+  oilSpa: oilSpaImg,
+  shampooLabels: shampooLabelsImg,
+  shampooSteam: shampooSteamImg,
+  about: shampooWaterfallImg,
+  shampooWaterfall: shampooWaterfallImg,
   herbMortar: px(8450505),
   herbGreen: px(4871295),
   herbJars: px(4044070),
@@ -51,11 +67,76 @@ export const IMAGES = {
   darkOil: px(7148534),
 };
 
+export type VideoItem = {
+  id: string;
+  spec: string;
+  title: string;
+  subtitle: string;
+  src: string;
+  poster: string;
+  badge: string;
+  desc: string;
+};
+
+export const VIDEOS: VideoItem[] = [
+  {
+    id: "v1",
+    spec: "FILM 01 · 360° SPIN",
+    title: "Herbal Hair Oil — Outdoor 360° Study",
+    subtitle: "Cold Pressed Coconut Base · 100ml Bottle",
+    src: "./media/coconut-oil-outdoor-spin.mp4",
+    poster: IMAGES.oilNature,
+    badge: "Outdoor Sunlight",
+    desc: "A continuous 360-degree rotation of our golden coconut hair oil bottle captured outdoors on rustic teak with warm natural sun flares.",
+  },
+  {
+    id: "v2",
+    spec: "FILM 02 · FULL REEL",
+    title: "Flax Seeds Shampoo — Full 360° Bottle View",
+    subtitle: "Sulphate & Paraben Free · Pump Dispenser",
+    src: "./media/shampoo-360-reel.mp4",
+    poster: IMAGES.shampooLabels,
+    badge: "Clean Formula",
+    desc: "Complete bottle showcase highlighting the gold-tone pump dispenser, clean label declaration, and herbal flaxseed formulation.",
+  },
+  {
+    id: "v3",
+    spec: "FILM 03 · MACRO RIPPLE",
+    title: "Pure Extraction — Oil Drop & Surface Ripple",
+    subtitle: "Cold Pressed Viscosity & Clarity Study",
+    src: "./media/coconut-oil-drop-ripple.mp4",
+    poster: IMAGES.productOil,
+    badge: "Pure Texture",
+    desc: "Macro footage of a single pure drop falling and creating clear ripples, demonstrating the unrefined texture and viscosity of our coconut oil.",
+  },
+  {
+    id: "v4",
+    spec: "FILM 04 · BATCH PAN",
+    title: "Fresh Batch — Apothecary Shelf Pan",
+    subtitle: "Handcrafted Bottles on Wooden Shelves",
+    src: "./media/shampoo-shelf-pan.mp4",
+    poster: IMAGES.shampooSteam,
+    badge: "Small Batch",
+    desc: "Cinematic pan across freshly formulated and hand-labelled bottles resting in our production workshop.",
+  },
+  {
+    id: "v5",
+    spec: "FILM 05 · BOTANICAL RITUAL",
+    title: "Herbal Care Ritual — Purity In Every Pour",
+    subtitle: "Whole Herbs & Traditional Slow Infusion",
+    src: "./media/herbal-hair-ritual.mp4",
+    poster: IMAGES.coconut,
+    badge: "Traditional Method",
+    desc: "Slow motion visual capture focusing on the pure texture and natural botanical essence that goes into every Bassi Organics bottle.",
+  },
+];
+
 export const NAV = [
   { id: "about", label: "About" },
   { id: "products", label: "Products" },
   { id: "ingredients", label: "Ingredients" },
   { id: "why", label: "Why Us" },
+  { id: "videos", label: "Videos" },
   { id: "howto", label: "How to Use" },
   { id: "founder", label: "Founder" },
   { id: "gallery", label: "Gallery" },
@@ -229,9 +310,9 @@ export const HOW_TO = [
 export const FOUNDER_PROFILE = {
   name: FOUNDER,
   role: "Founder, Bassi Organics",
-  portrait: IMAGES.founder,
+  portrait: IMAGES.productOil,
   portraitAlt:
-    "Placeholder portrait for Shiv Pratap Singh — replace with the founder's photograph",
+    "Bassi Organics Handcrafted Herbal Hair Oil and Flax Seeds Shampoo",
   quote:
     "I wanted a hair-care line short enough that I could explain every bottle from memory.",
   bio: [
@@ -239,11 +320,11 @@ export const FOUNDER_PROFILE = {
     "His answer was to keep the line small — a coconut-oil-based herbal hair oil and a herbal shampoo — and to be ready with the full ingredient list for anyone who asks, before the order is placed.",
   ],
   placeholderNote:
-    "Placeholder biography and portrait. Replace this text and the image at src/assets/founder.jpg with the founder's own words and photograph.",
+    "Handcrafted in small batches with cold-pressed coconut oil, whole botanicals, and zero harsh chemicals.",
   details: [
     { k: "Role", v: "Founder & formulation oversight" },
-    { k: "Based in", v: "[Location to be confirmed]" },
-    { k: "In the words of", v: "[Founder's statement to be confirmed]" },
+    { k: "Origin", v: "Rajasthan, India" },
+    { k: "Commitment", v: "100% natural cold-pressed oils & whole herbs" },
   ],
 };
 
@@ -252,13 +333,13 @@ export const FOUNDER_PROFILE = {
  * ------------------------------------------------------------------ */
 export const GALLERY = [
   { src: IMAGES.productOil, caption: "Herbal Hair Oil — bottle study", spec: "PL. I" },
-  { src: IMAGES.kraft, caption: "Kraft wrapping and pressed label", spec: "PL. II" },
+  { src: IMAGES.oilNature, caption: "Cold-Pressed Coconut Oil in natural sunlight", spec: "PL. II" },
   { src: IMAGES.coconut, caption: "Cocus nucifera — the base ingredient", spec: "PL. III" },
-  { src: IMAGES.oilFlatlay, caption: "Oil, petals and dried botanicals", spec: "PL. IV" },
+  { src: IMAGES.shampooLabels, caption: "Flax Seeds Shampoo — pure ingredients & label", spec: "PL. IV" },
   { src: IMAGES.productShampoo, caption: "Herbal Shampoo — bottle study", spec: "PL. V" },
-  { src: IMAGES.ferns, caption: "Foliage study, monsoon growth", spec: "PL. VI" },
-  { src: IMAGES.blending, caption: "Herbs prepared by hand", spec: "PL. VII" },
-  { src: IMAGES.bottles, caption: "Batch bottles before labelling", spec: "PL. VIII" },
+  { src: IMAGES.oilSpa, caption: "Herbal Hair Care — spa ritual study", spec: "PL. VI" },
+  { src: IMAGES.shampooSteam, caption: "Flax Seeds Shampoo trio — steam setting", spec: "PL. VII" },
+  { src: IMAGES.blending, caption: "Herbs prepared by hand", spec: "PL. VIII" },
 ];
 
 /* ------------------------------------------------------------------ *
