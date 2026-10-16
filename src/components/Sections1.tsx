@@ -59,10 +59,10 @@ export function About() {
           <div className="plate p-3">
             <Photo
               src={IMAGES.about}
-              alt="Flat lay of a botanical oil bottle with natural elements on a warm beige surface"
+              alt="Bassi Organics Flax Seeds Shampoo bottle on river stone pedestal by a natural waterfall"
               className="aspect-[4/5]"
-              spec="Plate A"
-              caption="The house table — oil, herbs, paper"
+              spec="Plate A — Formulation"
+              caption="Flax Seeds Shampoo — pure botanicals & clean formula"
             />
           </div>
         </Reveal>
@@ -315,12 +315,18 @@ export function WhyUs() {
           <div className="lg:sticky lg:top-28">
             <div className="plate p-3">
               <Photo
-                src={IMAGES.leafTexture}
-                alt="Close-up of a fresh green leaf showing its veins"
+                src={IMAGES.oilNature}
+                alt="Bassi Organics pure cold-pressed coconut hair oil in natural outdoor sunlight"
                 className="aspect-[3/4]"
-                spec="Plate B"
-                caption="Leaf structure — nothing hidden in the detail"
+                spec="Plate B — Pure Batch"
+                caption="Cold-pressed coconut oil base — nothing hidden in the formulation"
               />
+              <div className="mt-3 border-t border-forest/15 px-2 pt-3">
+                <span className="u-label-sm text-amber">Batch Promise</span>
+                <p className="mt-1 text-[0.88rem] leading-relaxed text-taupe">
+                  Formulated in small handcrafted runs with 100% natural oils and whole herbs.
+                </p>
+              </div>
             </div>
           </div>
         </Reveal>

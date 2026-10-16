@@ -68,7 +68,7 @@ export function Header() {
 
           <nav className="hidden items-center gap-5 xl:flex" aria-label="Primary">
             {NAV.filter((item) =>
-              ["about", "products", "ingredients", "howto", "gallery", "faq", "order", "contact"].includes(
+              ["about", "products", "ingredients", "why", "videos", "howto", "gallery", "faq", "order", "contact"].includes(
                 item.id,
               ),
             ).map((item) => (
@@ -194,11 +194,6 @@ export function Hero() {
             loading="eager"
             decoding="async"
           />
-          <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(22,36,27,0.62),rgba(22,36,27,0.06)_45%,transparent)]" />
-          <div className="absolute bottom-5 left-5 right-5 flex flex-wrap items-baseline gap-x-4 gap-y-1 lg:bottom-8 lg:left-8">
-            <span className="u-label-sm text-beige">Spec. No. 01</span>
-            <span className="u-label-sm text-cream/75">Cocus nucifera · herbal hair oil</span>
-          </div>
         </div>
 
         {/* label panel — left-hand page */}
@@ -206,7 +201,6 @@ export function Hero() {
           <div className="plate w-full px-6 py-9 sm:px-10 sm:py-12">
             <div className="flex items-center gap-4">
               <Logo className="h-10 w-10 sm:h-12 sm:w-12" />
-              <span className="u-label-sm text-amber">Catalogue No. 01</span>
               <span className="h-px flex-1 bg-forest/25" />
             </div>
 

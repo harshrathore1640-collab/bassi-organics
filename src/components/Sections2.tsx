@@ -15,10 +15,43 @@ import { Section } from "./Sections1";
 /* ============================ FOUNDER ============================ */
 export function Founder() {
   const f = FOUNDER_PROFILE;
+  const [activeIdx, setActiveIdx] = useState(0);
+
+  const productShowcase = [
+    {
+      src: IMAGES.productOil,
+      title: "Herbal Hair Oil",
+      caption: "Plate F1 — Cold Pressed Coconut Base",
+      spec: "100ml · Herbal Infusion",
+      desc: "Pure cold-pressed virgin coconut oil infused with whole herbs and amla for deep scalp nourishment.",
+    },
+    {
+      src: IMAGES.productShampoo,
+      title: "Flax Seeds Shampoo",
+      caption: "Plate F2 — Botanical Hair Cleanser",
+      spec: "100ml · Sulphate Free",
+      desc: "Formulated with real flax seeds, blue lotus and vitamin E. Free from sulphates, parabens and silicones.",
+    },
+    {
+      src: IMAGES.oilNature,
+      title: "Pure Batch in Nature",
+      caption: "Plate F3 — Cold Pressed 100% Natural Oil",
+      spec: "Raw & Authentic",
+      desc: "Small-batch extra virgin coconut oil prepared using traditional slow extraction methods.",
+    },
+    {
+      src: IMAGES.shampooLabels,
+      title: "Flax Botanicals & Label",
+      caption: "Plate F4 — Complete Transparency",
+      spec: "Clean Formulation",
+      desc: "Clear ingredient declarations with zero concealed additives or synthetic fillers.",
+    },
+  ];
+
   return (
     <Section id="founder" tone="forest" className="border-cream/15">
       <SectionHead
-        spec="Section 06 — Meet the Founder"
+        spec="Section 06 — Vision & Craft"
         tone="light"
         title={
           <>
@@ -26,28 +59,50 @@ export function Founder() {
             <span className="italic text-beige"> founder of Bassi Organics.</span>
           </>
         }
-        intro="A short introduction written by the founder himself. Until his final text and photograph are supplied, the copy and portrait below are clearly marked placeholders."
+        intro="The philosophy behind Bassi Organics — handcrafted herbal hair care rooted in pure coconut oil and whole botanical herbs, formulated with full ingredient transparency."
       />
 
       <div className="grid gap-10 lg:grid-cols-12 lg:gap-14">
         <Reveal className="lg:col-span-5">
           <div className="plate plate-light p-3">
-            <div className="relative">
-              <Photo
-                src={f.portrait}
-                alt={f.portraitAlt}
-                className="aspect-[4/5]"
-                imgClassName="object-top"
+            <div className="relative aspect-[4/5] overflow-hidden bg-forest/20">
+              <img
+                src={productShowcase[activeIdx].src}
+                alt={productShowcase[activeIdx].title}
+                className="h-full w-full object-cover object-center transition-all duration-300"
               />
-              <span className="absolute left-3 top-3 bg-cream px-3 py-1.5 u-label-sm text-forest">
-                Placeholder portrait
+              <span className="absolute left-3 top-3 bg-cream/95 px-3 py-1.5 u-label-sm text-forest font-medium shadow-sm">
+                {productShowcase[activeIdx].spec}
               </span>
             </div>
+
+            {/* Thumbnail switcher */}
+            <div className="mt-3 grid grid-cols-4 gap-2">
+              {productShowcase.map((p, idx) => (
+                <button
+                  key={p.title}
+                  type="button"
+                  onClick={() => setActiveIdx(idx)}
+                  className={`relative aspect-square overflow-hidden border transition-all cursor-pointer ${
+                    idx === activeIdx
+                      ? "border-amber ring-2 ring-amber/80 opacity-100"
+                      : "border-cream/20 opacity-60 hover:opacity-100"
+                  }`}
+                  aria-label={p.title}
+                >
+                  <img
+                    src={p.src}
+                    alt={p.title}
+                    className="h-full w-full object-cover"
+                  />
+                </button>
+              ))}
+            </div>
+
             <div className="px-1 pt-4 pb-1">
-              <p className="u-label-sm text-beige-deep">Plate F — founder</p>
-              <p className="mt-2 text-[0.9rem] leading-relaxed text-cream/70">
-                Replace <span className="text-beige">src/assets/founder.jpg</span> with the
-                founder's own photograph — the frame and caption will stay as they are.
+              <p className="u-label-sm text-beige-deep">{productShowcase[activeIdx].caption}</p>
+              <p className="mt-1 text-[0.9rem] leading-relaxed text-cream/75">
+                {productShowcase[activeIdx].desc}
               </p>
             </div>
           </div>
@@ -83,9 +138,9 @@ export function Founder() {
           </Reveal>
 
           <Reveal delay={0.26}>
-            <div className="mt-7 border border-dashed border-cream/40 px-5 py-4">
-              <p className="u-label-sm text-beige">Placeholder content</p>
-              <p className="mt-2 text-[0.9rem] leading-relaxed text-cream/70">
+            <div className="mt-7 border border-cream/25 bg-cream/5 px-5 py-4">
+              <p className="u-label-sm text-beige">The Bassi Commitment</p>
+              <p className="mt-2 text-[0.9rem] leading-relaxed text-cream/80">
                 {f.placeholderNote}
               </p>
             </div>
