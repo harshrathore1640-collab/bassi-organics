@@ -78,7 +78,7 @@ export function About() {
           <Reveal delay={0.14}>
             <div className="mt-7 grid gap-5 text-[1rem] leading-[1.8] text-taupe sm:grid-cols-2">
               <p>
-                So we went the other way. One coconut-oil base. One herbal hair oil built on
+                So we went the other way. One coconut-oil base. One organic hair oil built on
                 it. One shampoo to wash it out. That is the entire catalogue, and each one is
                 prepared in batches small enough that we can tell you which batch your bottle
                 came from.
@@ -97,7 +97,7 @@ export function About() {
               {[
                 ["Brand", "Bassi Organics"],
                 ["Founder", "Shiv Pratap Singh"],
-                ["Products", "Herbal Hair Oil · Herbal Shampoo"],
+                ["Products", "Organic Hair Oil · Organic Shampoo"],
                 ["Base ingredient", "Coconut oil"],
                 ["Ordering", "Direct, over WhatsApp"],
                 ["Enquiries", "+91 90247 75584"],
@@ -237,7 +237,7 @@ export function Ingredients() {
             <dl className="mt-7 border-t border-forest/20">
               {[
                 ["Confirmed by brand", "Yes — base ingredient"],
-                ["Used in", "Herbal Hair Oil · Herbal Shampoo"],
+                ["Used in", "Organic Hair Oil · Organic Shampoo"],
                 ["Full declaration", "Shared on WhatsApp before ordering"],
               ].map(([k, v]) => (
                 <div
@@ -282,7 +282,7 @@ export function Ingredients() {
           </p>
           <Btn
             href={waLink(
-              "Hello Bassi Organics, please share the complete ingredient list for your Herbal Hair Oil and Herbal Shampoo.",
+              "Hello Bassi Organics, please share the complete ingredient list for your Organic Hair Oil and Organic Shampoo.",
             )}
             variant="solid"
             className="shrink-0"

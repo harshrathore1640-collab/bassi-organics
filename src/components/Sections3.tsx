@@ -485,7 +485,7 @@ export function Footer() {
                 </span>
               </div>
               <p className="mt-6 max-w-[44ch] text-[1rem] leading-[1.8] text-cream/75">
-                Coconut-oil-based herbal hair oil and a herbal shampoo. Short ingredient lists,
+                Coconut-oil-based organic hair oil and an organic shampoo. Short ingredient lists,
                 small batches, and a WhatsApp line that a human answers.
               </p>
               <div className="mt-4 flex items-start gap-2.5 text-[0.88rem] leading-relaxed text-cream/80">

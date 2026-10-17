@@ -60,6 +60,7 @@ export const IMAGES = {
   coconutMarket: px(36063662),
   kraft: px(7814773),
   oilFlatlay: px(6694212),
+  organicFlatlay: px(7526022),
   herbalFlatlay: px(7526022),
   ferns: px(35996089),
   bottles: px(6694191),
@@ -82,7 +83,7 @@ export const VIDEOS: VideoItem[] = [
   {
     id: "v1",
     spec: "FILM 01 · 360° SPIN",
-    title: "Herbal Hair Oil — Outdoor 360° Study",
+    title: "Organic Hair Oil — Outdoor 360° Study",
     subtitle: "Cold Pressed Coconut Base · 100ml Bottle",
     src: "./media/coconut-oil-outdoor-spin.mp4",
     poster: IMAGES.oilNature,
@@ -97,7 +98,7 @@ export const VIDEOS: VideoItem[] = [
     src: "./media/shampoo-360-reel.mp4",
     poster: IMAGES.shampooLabels,
     badge: "Clean Formula",
-    desc: "Complete bottle showcase highlighting the gold-tone pump dispenser, clean label declaration, and herbal flaxseed formulation.",
+    desc: "Complete bottle showcase highlighting the gold-tone pump dispenser, clean label declaration, and organic flaxseed formulation.",
   },
   {
     id: "v3",
@@ -122,7 +123,7 @@ export const VIDEOS: VideoItem[] = [
   {
     id: "v5",
     spec: "FILM 05 · BOTANICAL RITUAL",
-    title: "Herbal Care Ritual — Purity In Every Pour",
+    title: "Organic Care Ritual — Purity In Every Pour",
     subtitle: "Whole Herbs & Traditional Slow Infusion",
     src: "./media/herbal-hair-ritual.mp4",
     poster: IMAGES.coconut,
@@ -165,7 +166,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "hair-oil",
     spec: "SPEC. NO. 01",
-    name: "Herbal Hair Oil",
+    name: "Organic Hair Oil",
     latin: "Oleum herbarium — on a coconut-oil base",
     blurb:
       "Our coconut-oil-based hair oil, prepared with herbs in the traditional way. Built for a slow scalp massage and an unhurried wash day.",
@@ -178,17 +179,17 @@ export const PRODUCTS: Product[] = [
       "No price published — confirmed on WhatsApp",
     ],
     enquiry:
-      "Hello Bassi Organics, I would like to enquire about the Herbal Hair Oil. Please share the current ingredient list, pack sizes and price.",
+      "Hello Bassi Organics, I would like to enquire about the Organic Hair Oil. Please share the current ingredient list, pack sizes and price.",
   },
   {
     id: "shampoo",
     spec: "SPEC. NO. 02",
-    name: "Herbal Shampoo",
+    name: "Organic Shampoo",
     latin: "Sapo herbarium — gentle cleansing wash",
     blurb:
-      "A herbal wash made to follow the oil — enough to rinse the oil out without turning wash day into a stripping session.",
+      "An organic wash made to follow the oil — enough to rinse the oil out without turning wash day into a stripping session.",
     image: IMAGES.productShampoo,
-    base: "Herbal cleansing formula",
+    base: "Organic cleansing formula",
     facts: [
       "Formulated as the second step after the hair oil",
       "A small amount lathers across the whole scalp",
@@ -196,7 +197,7 @@ export const PRODUCTS: Product[] = [
       "No price published — confirmed on WhatsApp",
     ],
     enquiry:
-      "Hello Bassi Organics, I would like to enquire about the Herbal Shampoo. Please share the current ingredient list, pack sizes and price.",
+      "Hello Bassi Organics, I would like to enquire about the Organic Shampoo. Please share the current ingredient list, pack sizes and price.",
   },
 ];
 
@@ -216,15 +217,15 @@ export const CONFIRMED_INGREDIENT = {
 export const RESERVED_INGREDIENTS = [
   {
     spec: "SPEC. NO. 02",
-    label: "Herbal actives — oil",
+    label: "Organic actives — oil",
     image: IMAGES.herbMortar,
-    note: "Botanical plate reserved. The exact herbs used in the Herbal Hair Oil will be listed here once confirmed by Bassi Organics.",
+    note: "Botanical plate reserved. The exact herbs used in the Organic Hair Oil will be listed here once confirmed by Bassi Organics.",
   },
   {
     spec: "SPEC. NO. 03",
-    label: "Herbal actives — shampoo",
+    label: "Organic actives — shampoo",
     image: IMAGES.herbGreen,
-    note: "Botanical plate reserved. The cleansing and herbal constituents of the Herbal Shampoo will be listed here once confirmed.",
+    note: "Botanical plate reserved. The cleansing and organic constituents of the Organic Shampoo will be listed here once confirmed.",
   },
   {
     spec: "SPEC. NO. 04",
@@ -278,20 +279,20 @@ export const WHY = [
 export const HOW_TO = [
   {
     spec: "PROCEDURE A",
-    title: "Using the Herbal Hair Oil",
+    title: "Using the Organic Hair Oil",
     image: IMAGES.massage,
     steps: [
       "Part dry or slightly damp hair into sections so the scalp is reachable.",
       "Take a small amount at the fingertips and apply scalp-first, section by section.",
       "Massage in with the pads of the fingers for two to three minutes. Fingernails off the scalp.",
       "Leave it on for at least thirty minutes — longer, or overnight, if it suits your routine.",
-      "Wash out with the Herbal Shampoo. Repeat the wash if you left it on overnight.",
+      "Wash out with the Organic Shampoo. Repeat the wash if you left it on overnight.",
     ],
     note: "Patch-test on the inner arm before first use. Stop using if irritation occurs.",
   },
   {
     spec: "PROCEDURE B",
-    title: "Using the Herbal Shampoo",
+    title: "Using the Organic Shampoo",
     image: IMAGES.washing,
     steps: [
       "Rinse hair thoroughly with water to lift out most of the oil first.",
@@ -312,12 +313,12 @@ export const FOUNDER_PROFILE = {
   role: "Founder, Bassi Organics",
   portrait: IMAGES.productOil,
   portraitAlt:
-    "Bassi Organics Handcrafted Herbal Hair Oil and Flax Seeds Shampoo",
+    "Bassi Organics Handcrafted Organic Hair Oil and Flax Seeds Shampoo",
   quote:
     "I wanted a hair-care line short enough that I could explain every bottle from memory.",
   bio: [
     "Shiv Pratap Singh founded Bassi Organics around a simple frustration: hair-care shelves full of long ingredient lists nobody could read out loud.",
-    "His answer was to keep the line small — a coconut-oil-based herbal hair oil and a herbal shampoo — and to be ready with the full ingredient list for anyone who asks, before the order is placed.",
+    "His answer was to keep the line small — a coconut-oil-based organic hair oil and an organic shampoo — and to be ready with the full ingredient list for anyone who asks, before the order is placed.",
   ],
   placeholderNote:
     "Handcrafted in small batches with cold-pressed coconut oil, whole botanicals, and zero harsh chemicals.",
@@ -332,12 +333,12 @@ export const FOUNDER_PROFILE = {
  *  Gallery
  * ------------------------------------------------------------------ */
 export const GALLERY = [
-  { src: IMAGES.productOil, caption: "Herbal Hair Oil — bottle study", spec: "PL. I" },
+  { src: IMAGES.productOil, caption: "Organic Hair Oil — bottle study", spec: "PL. I" },
   { src: IMAGES.oilNature, caption: "Cold-Pressed Coconut Oil in natural sunlight", spec: "PL. II" },
   { src: IMAGES.coconut, caption: "Cocus nucifera — the base ingredient", spec: "PL. III" },
   { src: IMAGES.shampooLabels, caption: "Flax Seeds Shampoo — pure ingredients & label", spec: "PL. IV" },
-  { src: IMAGES.productShampoo, caption: "Herbal Shampoo — bottle study", spec: "PL. V" },
-  { src: IMAGES.oilSpa, caption: "Herbal Hair Care — spa ritual study", spec: "PL. VI" },
+  { src: IMAGES.productShampoo, caption: "Organic Shampoo — bottle study", spec: "PL. V" },
+  { src: IMAGES.oilSpa, caption: "Organic Hair Care — spa ritual study", spec: "PL. VI" },
   { src: IMAGES.shampooSteam, caption: "Flax Seeds Shampoo trio — steam setting", spec: "PL. VII" },
   { src: IMAGES.blending, caption: "Herbs prepared by hand", spec: "PL. VIII" },
 ];
@@ -350,13 +351,13 @@ export const REVIEWS = [
     initials: "—",
     name: "Awaiting verified customer",
     meta: "Placeholder review slot 01",
-    text: "This slot holds a real, verified customer review of the Herbal Hair Oil once it has been collected and approved for publication.",
+    text: "This slot holds a real, verified customer review of the Organic Hair Oil once it has been collected and approved for publication.",
   },
   {
     initials: "—",
     name: "Awaiting verified customer",
     meta: "Placeholder review slot 02",
-    text: "This slot holds a real, verified customer review of the Herbal Shampoo, including the pack size ordered and the date of the review.",
+    text: "This slot holds a real, verified customer review of the Organic Shampoo, including the pack size ordered and the date of the review.",
   },
   {
     initials: "—",
@@ -376,11 +377,11 @@ export const FAQS = [
   },
   {
     q: "How many products do you sell?",
-    a: "Two: the Herbal Hair Oil and the Herbal Shampoo. Everything we make is on the Products section above.",
+    a: "Two: the Organic Hair Oil and the Organic Shampoo. Everything we make is on the Products section above.",
   },
   {
     q: "How do I use the hair oil and the shampoo together?",
-    a: "Oil the scalp first and leave it on for at least half an hour, then wash with the Herbal Shampoo — rinse thoroughly first, lather a small amount in the palm, and repeat only if needed. The full step-by-step is in How to Use.",
+    a: "Oil the scalp first and leave it on for at least half an hour, then wash with the Organic Shampoo — rinse thoroughly first, lather a small amount in the palm, and repeat only if needed. The full step-by-step is in How to Use.",
   },
   {
     q: "What is the price?",

@@ -20,9 +20,9 @@ export function Founder() {
   const productShowcase = [
     {
       src: IMAGES.productOil,
-      title: "Herbal Hair Oil",
+      title: "Organic Hair Oil",
       caption: "Plate F1 — Cold Pressed Coconut Base",
-      spec: "100ml · Herbal Infusion",
+      spec: "100ml · Organic Infusion",
       desc: "Pure cold-pressed virgin coconut oil infused with whole herbs and amla for deep scalp nourishment.",
     },
     {
@@ -59,7 +59,7 @@ export function Founder() {
             <span className="italic text-beige"> founder of Bassi Organics.</span>
           </>
         }
-        intro="The philosophy behind Bassi Organics — handcrafted herbal hair care rooted in pure coconut oil and whole botanical herbs, formulated with full ingredient transparency."
+        intro="The philosophy behind Bassi Organics — handcrafted organic hair care rooted in pure coconut oil and whole botanical herbs, formulated with full ingredient transparency."
       />
 
       <div className="grid gap-10 lg:grid-cols-12 lg:gap-14">
@@ -331,8 +331,8 @@ export function Reviews() {
       <Reveal>
         <div className="relative mb-8 overflow-hidden border border-forest/30">
           <Photo
-            src={IMAGES.herbalFlatlay}
-            alt="Flat lay of herbal preparations and botanical plants on a warm background"
+            src={IMAGES.organicFlatlay}
+            alt="Flat lay of organic preparations and botanical plants on a warm background"
             className="aspect-[16/7] min-h-[190px] sm:aspect-[16/5]"
           />
           <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(22,36,27,0.86),rgba(22,36,27,0.35)_70%,transparent)]" />

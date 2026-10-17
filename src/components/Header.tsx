@@ -10,7 +10,7 @@ export function SideRail() {
         <Logo className="h-9 w-9" />
       </a>
       <div className="vertical-rl u-label-sm rotate-180 text-taupe">
-        Bassi Organics — Herbal Hair Care
+        Bassi Organics — Organic Hair Care
       </div>
       <div className="u-label-sm text-beige-deep">Est.</div>
     </div>
@@ -93,7 +93,7 @@ export function Header() {
               <span className="u-label-sm">{PHONE_DISPLAY}</span>
             </a>
             <Btn
-              href={waLink("Hello Bassi Organics, I would like to know more about your herbal hair products.")}
+              href={waLink("Hello Bassi Organics, I would like to know more about your organic hair products.")}
               variant="solid"
               className="hidden px-5! py-3! sm:inline-flex"
             >
@@ -189,7 +189,7 @@ export function Hero() {
         <div className="relative order-1 h-[46vh] min-h-[300px] border-b border-forest/25 lg:order-2 lg:h-auto lg:border-b-0 lg:border-l">
           <img
             src={IMAGES.hero}
-            alt="Coconut, fresh botanical leaves and a bottle of golden herbal hair oil arranged on cream paper"
+            alt="Coconut, fresh botanical leaves and a bottle of golden organic hair oil arranged on cream paper"
             className="plate-img absolute inset-0 h-full w-full object-cover object-center"
             loading="eager"
             decoding="async"
@@ -204,7 +204,7 @@ export function Hero() {
               <span className="h-px flex-1 bg-forest/25" />
             </div>
 
-            <p className="u-label mt-8 text-taupe">Herbal hair care · coconut oil base</p>
+            <p className="u-label mt-8 text-taupe">Organic hair care · coconut oil base</p>
 
             <h1 className="mt-5 text-[clamp(2.35rem,4.4vw,4.3rem)] font-semibold leading-[0.98] tracking-[-0.02em] text-forest">
               Hair care rooted in
@@ -213,8 +213,8 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 max-w-[46ch] text-[1.02rem] leading-[1.75] text-taupe">
-              Bassi Organics makes two things, carefully — a coconut-oil-based herbal hair oil
-              and a herbal shampoo. Short ingredient lists, small batches, and the full
+              Bassi Organics makes two things, carefully — a coconut-oil-based organic hair oil
+              and an organic shampoo. Short ingredient lists, small batches, and the full
               declaration in your hands before you order.
             </p>
 
